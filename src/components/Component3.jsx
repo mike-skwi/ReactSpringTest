@@ -8,7 +8,7 @@ class Component3 extends React.Component {
     render() {
         return (
             <div style={c3style}>
-                <h1>Testing</h1>
+                <h1>wowwwwwwwwwwwwwwwwwwwwwwww</h1>
             </div>
         )
     }

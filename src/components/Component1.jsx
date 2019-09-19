@@ -1,5 +1,5 @@
 import React from 'react'
-import {Spring} from 'react-spring/renderprops';
+import {Spring, config} from 'react-spring/renderprops';
 import { tsConstructorType } from '@babel/types';
 
 
@@ -20,6 +20,7 @@ class Component1 extends React.Component {
             <Spring
             from={{opacity:0, marginTop:-500}}
             to={{opacity:1, marginTop:0}}
+            config={{tension:1000,friction:500, precision:1}}
             >
             { props => (
             <div style={props}>

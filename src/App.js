@@ -4,7 +4,7 @@ import Testing from './components/Testing.jsx'
 import Component1 from './components/Component1.jsx'
 import Component2 from './components/Component2.jsx'
 import Component3 from './components/Component3.jsx'
-import { Transition, animated } from 'react-spring/renderprops';
+import { Transition, animated, config } from 'react-spring/renderprops';
 
 class App extends React.Component {
   state = {
@@ -25,9 +25,14 @@ class App extends React.Component {
         <Transition
           native
           items={this.state.showComponent3}
-          from={{ opacity:0}}
-          enter={{opacity:1}}
+          from={{
+            opacity:0, 
+            background:'linear-gradient(to right, #30e8bf, #ff8235)',
+            
+          }}
+          enter={{opacity:1, background:'linear-gradient(to right, #ffffff, #000000)'}}
           leave={{opacity:0}}
+          config={config.default}
         >
           {show => show && (props => (
             <animated.div style={props}>
